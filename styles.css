@@ -260,39 +260,4 @@ hr{
         display: none ;
     }
 
-    #menu:checked ~ .navbar {
-        display: initial;
-    }
-
-    .header-content{
-        flex-direction: column;
-        padding: 180px 30px 30px 30px;
-    }
-
-    .header-1{
-        width: 100%;
-        align-items: center;
-    }
-
-    .header-2{
-        width: 100%;
-        align-items: center;
-    }
-
-    .movies{
-        padding: 30px ;
-    }
-
-    .footer{
-        margin-top: 30px;
-        padding: 30px;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer ul{
-        margin-top: 15px;
-        justify-content: center;
-    }
-
 }
