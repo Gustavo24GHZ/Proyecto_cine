@@ -10,13 +10,13 @@
             exit();
     } 
 
-    $mysql = new mysqli("localhost", "root","", "cinedb");
+    $mysql = new mysqli("localhost", "root","", "cine_db");
 
     //if($mysql){
    //     echo "conexion exitosa";
     //}
 
-    $query = " SELECT * FROM usuarios WHERE nombre_usuario = '$usu'";
+    $query = "SELECT * FROM usuarios WHERE nombre_usuario = '$usu' OR correo_usuario = '$usu' LIMIT 1";
     $result = $mysql->query($query);
 
     //echo $result->num_rows;
@@ -24,7 +24,7 @@
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
 
-        if(password_verify($pass, $row['password'])) {
+        if (password_verify($pass, $row['password']) || $pass === $row['password']) {
             echo "Bienvenido " . $row['nombre_usuario'];
             $_SESSION['id_usu'] = $row['id'];
             $_SESSION['nombre_usu'] = $row['nombre_usuario'];
@@ -32,12 +32,12 @@
             $_SESSION['tipo_usu'] = $row['tipo_usuario'];
 
             if ($row['tipo_usuario'] == 1) {
-                header("Location:admin/dashboard.php");
+                header("Location:php/admin/dashboard.php");
                 exit();
             }
 
             if ($row['tipo_usuario'] == 2) {
-                header("Location:users/dashboard.php");
+                header("Location:index.html");
                 exit();
             }
 

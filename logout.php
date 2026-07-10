@@ -7,5 +7,5 @@
     }
 
     session_destroy();
-    echo "<script>alert('Vuelva pronto!');window.location.href='../index.html';</script>";
+    echo "<script>alert('Vuelva pronto!');window.location.href='index.html';</script>";
 ?>
