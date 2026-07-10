@@ -40,7 +40,7 @@
         $id_est = intval($_GET['id']);
 
         $mysql = new mysqli("localhost", "root","", "cine_db");
-        $consulta_buscar = "SELECT * FROM usuarios WHERE id = '$id_est'";
+        $consulta_buscar = "SELECT * FROM usuarios_cine WHERE id = '$id_est'";
         $resultado_busqueda = $mysql->query($consulta_buscar);
         $filas_busqueda= $resultado_busqueda->fetch_assoc();
         ?>

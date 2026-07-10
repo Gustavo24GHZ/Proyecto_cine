@@ -8,14 +8,14 @@
 
     $mysql = new mysqli("localhost", "root","", "cine_db");
 
-    $consulta = "SELECT * FROM usuarios";
+    $consulta = "SELECT * FROM usuarios_cine";
     $resultado = $mysql->query($consulta);
     $filas= $resultado->fetch_all(MYSQLI_ASSOC);
 
     if (isset($_POST['busqueda'])) {
         $termino_busqueda = $mysql->real_escape_string($_POST['busqueda']);
 
-        $consulta_buscar = "SELECT * FROM usuarios WHERE (nombre_usuario LIKE '%$termino_busqueda%') OR (correo_usuario LIKE '%$termino_busqueda%')";
+        $consulta_buscar = "SELECT * FROM usuarios_cine WHERE (nombre_usuario LIKE '%$termino_busqueda%') OR (correo_usuario LIKE '%$termino_busqueda%')";
         $resultado_busqueda = $mysql->query($consulta_buscar);
         $filas_busqueda= $resultado_busqueda->fetch_all(MYSQLI_ASSOC);
     }
@@ -192,13 +192,13 @@
         <script src=https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js>""</script>
         <script src=https://cdn.datatables.net/2.3.8/js/dataTables.js>""</script>
         <script src=https://cdn.datatables.net/2.3.8/js/dataTables.bootstrap5.js>""</script> -->
-
+<!-- 
         <scipt>
             new DataTable('#tabla_Usuarios', {
                 language: {
                     url: 'https://cdn.datatables.net/plug-ins/2.3.8/i18n/es-ES.json'
                 }
-            }); </script>
+            }); </script> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>

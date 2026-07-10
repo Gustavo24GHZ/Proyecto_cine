@@ -16,7 +16,7 @@
    //     echo "conexion exitosa";
     //}
 
-    $query = "SELECT * FROM usuarios WHERE nombre_usuario = '$usu' OR correo_usuario = '$usu' LIMIT 1";
+    $query = "SELECT * FROM usuarios_cine WHERE nombre_usuario = '$usu' OR correo_usuario = '$usu' LIMIT 1";
     $result = $mysql->query($query);
 
     //echo $result->num_rows;

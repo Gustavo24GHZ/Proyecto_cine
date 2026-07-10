@@ -8,7 +8,7 @@ ob_start();
 require_once '../../dompdf/autoload.inc.php';
 
 $mysql = new mysqli("localhost", "root", "", "cine_db");
-$consulta = "SELECT * FROM usuarios";
+$consulta = "SELECT * FROM usuarios_cine";
 $resultado = $mysql->query($consulta);
 $filas = $resultado->fetch_all(MYSQLI_ASSOC);
 $mysql->close();

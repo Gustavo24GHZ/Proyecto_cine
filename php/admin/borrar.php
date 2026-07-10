@@ -14,7 +14,7 @@ if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
 
 $id_usuario = intval($_GET['id']);
 
-$eliminacion = "DELETE FROM usuarios WHERE id = '$id_usuario'";
+$eliminacion = "DELETE FROM usuarios_cine WHERE id = '$id_usuario'";
 $resultado = $mysql->query($eliminacion);
 
 if($resultado) {

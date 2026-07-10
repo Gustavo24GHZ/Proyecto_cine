@@ -8,7 +8,7 @@
 
     $mysql = new mysqli("localhost", "root","", "cine_db");
 
-    $consulta = "SELECT * FROM usuarios";
+    $consulta = "SELECT * FROM usuarios_cine";
     $resultado = $mysql->query($consulta);
     $filas= $resultado->fetch_all(MYSQLI_ASSOC);
 ?>
@@ -54,13 +54,13 @@
     <div class="col">
         <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 50vh;">
 
-        <div class="card" style="width: 18rem;">
+        <!-- <div class="card" style="width: 18rem;">
             <div class="card-header text-center fs-4 bg-success text-white">Productos</div>
                 <div class="card-body bg-success text-white">
                     <h1>
                         2
                     </h1>
-                </div>
+                </div> -->
         </div>
     </div>
     </div>

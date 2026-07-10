@@ -12,7 +12,7 @@ if (empty($_POST['nombre_usuario']) || empty($_POST['correo_usuario']) || empty(
     echo '<script>alert("Debe completar todos los campos");window.location.href="usuarios.php";</script>';
 } else {
 
-$edicion = "UPDATE usuarios SET
+$edicion = "UPDATE usuarios_cine SET
     nombre_usuario='$nombre_usuario',
     correo_usuario='$correo_usuario',
     tipo_usuario='$tipo_usuario'
